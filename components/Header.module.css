@@ -1,0 +1,31 @@
+.header {
+  padding: 4rem 5rem 2rem;
+  flex: 1;
+  display: flex;
+  gap: 50px;
+  margin-left: 0px;
+  margin-top: -40px;
+  background-color: black;
+  align-items: center;
+  color: white;
+  text-shadow: blanchedalmond;
+}
+
+.icon {
+  padding: 0.1rem;
+  width: 50px;
+  border-radius: 10rem;
+  right: 10px;
+
+  /* transform: translate(-75px, 22px); */
+}
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 500ms;
+}
+
+.cart {
+  position: absolute;
+  right: 30px;
+}
