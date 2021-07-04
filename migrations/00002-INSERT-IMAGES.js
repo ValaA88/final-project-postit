@@ -5,7 +5,8 @@ INSERT INTO IMAGES
 VALUES
   ('birthday1','/birthdayPic/happy_birthday_card_1.jpeg','birthday' ),
   ('birthday2','/birthdayPic/happy_birthday_card_2.jpeg','birthday' ),
-  ('birthday3','/birthdayPic/happy_birthday_card_3.jpeg','birthday' )
+  ('birthday3','/birthdayPic/happy_birthday_card_3.jpeg','birthday' ),
+  ('christmas1','/christmasPic/merry_christmas_postcard_1.jpeg','christmas' )
   `;
 };
 
