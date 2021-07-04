@@ -7,13 +7,20 @@ export default function PostCards() {
   return (
     <div>
       <Header />
-      <div>
+      <div className={styles.cards}>
         {data.map((card) => (
           <div key={card.title}>
-            <div>{card.category}</div>
-            {card.items.map((item) => (
-              <img src={item.url}></img>
-            ))}
+            <div className={styles.row}>
+              <h2>{card.category}</h2>
+              {card.items.map((item) => (
+                <img
+                  alt={item.title}
+                  className="image"
+                  key={item}
+                  src={item.url}
+                ></img>
+              ))}
+            </div>
           </div>
         ))}
       </div>
