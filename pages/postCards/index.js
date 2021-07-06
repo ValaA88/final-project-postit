@@ -1,3 +1,5 @@
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Carousel } from 'react-responsive-carousel';
 import Header from '../../components/Header/Header';
 import data from '../../data';
 import styles from './postcards.module.css';
@@ -22,21 +24,29 @@ export default function PostCards({ images }) {
           {categories.map((categoryName) => (
             <div>
               <div>{categoryName}</div>
-              {images
-                .filter((image) => image.category === categoryName)
-                .map((image) => (
-                  <div className={styles.row}>
-                    <div key={image.title}>
-                      <p>{image.title}</p>
-                      <img
-                        alt={image.title}
-                        className="image"
-                        key={image}
-                        src={image.url}
-                      ></img>
-                    </div>
-                  </div>
-                ))}
+              <div className={styles.row}>
+                {images
+                  .filter((image) => image.category === categoryName)
+                  .map((image) => {
+                    const cardLink = `postcards/${image.id}`;
+                    return (
+                      <div>
+                        <a href={cardLink}>
+                          <div key={image.title}>
+                            <p>{image.title}</p>
+
+                            <img
+                              alt={image.title}
+                              className={styles.image}
+                              key={image}
+                              src={image.url}
+                            ></img>
+                          </div>
+                        </a>
+                      </div>
+                    );
+                  })}
+              </div>
             </div>
           ))}
         </div>

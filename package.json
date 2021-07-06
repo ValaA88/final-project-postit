@@ -14,6 +14,7 @@
     "@emotion/react": "^11.4.0",
     "argon2": "^0.28.2",
     "camelcase-keys": "^6.2.2",
+    "carousel": "^0.0.3",
     "cookie": "^0.4.1",
     "csrf": "^3.1.0",
     "dotenv-cli": "^4.0.0",
@@ -24,7 +25,8 @@
     "pg-connection-string": "^2.5.0",
     "postgres": "^2.0.0-beta.5",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-responsive-carousel": "^3.2.19"
   },
   "devDependencies": {
     "eslint": "7.29.0",

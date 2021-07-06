@@ -11,15 +11,14 @@
 }
 
 .row {
-  content: '';
-  display: table;
-  clear: both;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 50px;
+}
 
-  & .image {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-    border-radius: 5px;
-  }
+.image {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }

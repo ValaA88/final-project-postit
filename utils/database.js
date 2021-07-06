@@ -35,3 +35,15 @@ export async function getImages() {
   `;
   return images;
 }
+
+export async function getCardById(id) {
+  const card = await sql`
+    SELECT *
+    FROM
+      images
+      WHERE
+      id = ${id}
+  `;
+
+  return card[0];
+}
