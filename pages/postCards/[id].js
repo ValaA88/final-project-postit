@@ -17,9 +17,10 @@ export default function SinglePostCard({ card }) {
   return (
     <div>
       <Header />
-      {card.url}
-      {card.title}
-      <img src={card.url} />
+      <div className={styles.cardTitle}>{card.title}</div>
+      <img className={styles.image} src={card.url} />
+      <h1 className={styles.inputTextHeader}>Write your text </h1>
+      <input className={styles.inputBox}></input>
     </div>
   );
 }

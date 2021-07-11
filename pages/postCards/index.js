@@ -16,6 +16,7 @@ export default function PostCards({ images }) {
     'landscape',
     'random',
   ];
+  const singleCardPage = `postcards/postcardpages/${categories}`;
   return (
     <div>
       <Header />
@@ -24,15 +25,20 @@ export default function PostCards({ images }) {
           {categories.map((categoryName) => (
             <div>
               <div>{categoryName}</div>
+
+              <a href={singleCardPage}>
+                <button className={styles.button}>View more</button>
+              </a>
               <div className={styles.row}>
                 {images
                   .filter((image) => image.category === categoryName)
+                  .slice(0, 3)
                   .map((image) => {
                     const cardLink = `postcards/${image.id}`;
                     return (
-                      <div>
+                      <div key={image.title}>
                         <a href={cardLink}>
-                          <div key={image.title}>
+                          <div>
                             <p>{image.title}</p>
 
                             <img
