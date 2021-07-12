@@ -29,9 +29,6 @@ export default function PostCards({ images }) {
               <div>
                 <div className={styles.categoryName}>{title}</div>
 
-                <a href={`postcards/postcardpages/${title}`}>
-                  <button className={styles.button}>View more</button>
-                </a>
                 <div className={styles.row}>
                   {images
                     .filter((image) => image.category === title)
@@ -56,6 +53,9 @@ export default function PostCards({ images }) {
                       );
                     })}
                 </div>
+                <a href={`postcards/postcardpages/${title}`}>
+                  <button className={styles.button}>View more</button>
+                </a>
               </div>
             ),
           )}
