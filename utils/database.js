@@ -47,3 +47,19 @@ export async function getCardById(id) {
 
   return card[0];
 }
+
+export async function insertUser(firstName, lastName, email, passwordHash) {
+  console.log('in database', firstName);
+  const users = await sql`
+    INSERT INTO users
+      (first_name, last_name, email, password)
+    VALUES
+      (${firstName}, ${lastName}, ${email}, ${passwordHash})
+    RETURNING
+      id,
+      first_name,
+      last_name,
+      email
+  `;
+  return users;
+}
