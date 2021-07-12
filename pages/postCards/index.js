@@ -9,52 +9,56 @@ export default function PostCards({ images }) {
   // and write the props names inside it
   console.log(images);
   const categories = [
-    'birthday',
-    'christmas',
-    'graduation',
-    'newYear',
-    'landscape',
-    'random',
+    { title: 'birthday' },
+    { title: 'christmas' },
+    { title: 'graduation' },
+    { title: 'newYear' },
+    { title: 'landscape' },
+    { title: 'random' },
   ];
-  const singleCardPage = `postcards/postcardpages/${categories}`;
+
   return (
     <div>
       <Header />
       <div className={styles.cards}>
         <div>
-          {categories.map((categoryName) => (
-            <div>
-              <div>{categoryName}</div>
+          {categories.map(
+            (
+              { title }, // instead of categoryName i can use the name of the Object key(title)
+            ) => (
+              <div>
+                <div className={styles.categoryName}>{title}</div>
 
-              <a href={singleCardPage}>
-                <button className={styles.button}>View more</button>
-              </a>
-              <div className={styles.row}>
-                {images
-                  .filter((image) => image.category === categoryName)
-                  .slice(0, 3)
-                  .map((image) => {
-                    const cardLink = `postcards/${image.id}`;
-                    return (
-                      <div key={image.title}>
-                        <a href={cardLink}>
-                          <div>
-                            <p>{image.title}</p>
+                <a href={`postcards/postcardpages/${title}`}>
+                  <button className={styles.button}>View more</button>
+                </a>
+                <div className={styles.row}>
+                  {images
+                    .filter((image) => image.category === title)
+                    .slice(0, 3)
+                    .map((image) => {
+                      const cardLink = `postcards/${image.id}`;
+                      return (
+                        <div key={image.title}>
+                          <a href={cardLink}>
+                            <div>
+                              <p className={styles.imageTitle}>{image.title}</p>
 
-                            <img
-                              alt={image.title}
-                              className={styles.image}
-                              key={image}
-                              src={image.url}
-                            ></img>
-                          </div>
-                        </a>
-                      </div>
-                    );
-                  })}
+                              <img
+                                alt={image.title}
+                                className={styles.image}
+                                key={image}
+                                src={image.url}
+                              ></img>
+                            </div>
+                          </a>
+                        </div>
+                      );
+                    })}
+                </div>
               </div>
-            </div>
-          ))}
+            ),
+          )}
         </div>
 
         {/* {images.map((image) => (

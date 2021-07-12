@@ -2,7 +2,7 @@ import Header from '../../../components/Header/Header';
 import styles from '../../postcards/singlepostcard.module.css';
 
 export default function SingleCardPage() {
-  const categories = ['birthday'];
+  const categories = ['christmas'];
   return (
     <div>
       <Header />

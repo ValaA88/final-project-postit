@@ -1,4 +1,9 @@
 .cardTitle {
+  font-family: fantasy;
+  font-size: 25px;
+  color: rgba(241, 236, 236, 0.925);
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .image {
