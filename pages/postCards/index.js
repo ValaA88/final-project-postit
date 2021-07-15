@@ -28,7 +28,7 @@ export default function PostCards({ images }) {
             ) => (
               <div>
                 <div className={styles.categoryName}>{title}</div>
-
+                {/* <div> */}
                 <div className={styles.row}>
                   {images
                     .filter((image) => image.category === title)
@@ -92,6 +92,9 @@ export default function PostCards({ images }) {
           </div>
         ))}
       </div> */}
+      <footer className={styles.footer}>
+        &#169;Copy by Vala A - Postit final project
+      </footer>
     </div>
   );
 }

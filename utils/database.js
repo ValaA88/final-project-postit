@@ -48,6 +48,22 @@ export async function getCardById(id) {
   return card[0];
 }
 
+export async function getUserByEmail(email) {
+  // Return undefined if userId is not parseable
+  // to an integer
+  if (!email) return undefined;
+
+  const users = await sql`
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      email = ${email}
+  `;
+  return users.map((user) => camelcaseKeys(user))[0];
+}
+
 export async function insertUser(firstName, lastName, email, passwordHash) {
   console.log('in database', firstName);
   const users = await sql`
