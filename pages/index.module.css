@@ -1,28 +1,81 @@
+.homePage {
+  background-color: khaki;
+}
+
+.backgroundImage {
+  width: 100%;
+}
+
 .container {
   display: flex;
   border-style: solid;
-  border-width: 5px;
+  border-width: 1px;
   border-color: black;
+
   border-radius: 20px;
-  padding: 50px 50px 50px;
+  background-color: white;
+  margin-top: -1950px;
+  margin-left: 90px;
 }
 
 .innerContainer {
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+  border-radius: 20px;
+  background-color: rgb(233, 230, 230);
 }
 
 .header {
   font-family: fantasy;
   font-size: 30px;
+  color: #043004ec;
 }
 
 .box {
+  display: grid;
+  gap: 20px;
+  color: #043004ec;
 }
 
 .inputGroup {
+  font-family: fantasy;
+  display: flex;
+  font-size: 20px;
+  gap: 20px;
+  color: #043004ec;
 }
 
 .loginInput {
+  display: grid;
+  border-radius: 5px;
+  color: #043004ec;
 }
 
 .loginBtn {
+  font-family: fantasy;
+  font-size: 15px;
+  border-radius: 5px;
+  padding-bottom: 4px;
+  color: #043004ec;
+}
+.loginBtn:hover {
+  transform: translate3d();
+}
+.emailText {
+  margin-right: 42px;
+}
+
+.passwordText {
+  margin-right: 7px;
+}
+
+.footer {
+  background-color: rgb(59, 58, 58);
+
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #043004ec;
 }

@@ -8,20 +8,22 @@ export default function SingleCardPage() {
     <div>
       <Header />
       <div>{categoriesPage}</div>
+      <a href={card}>
+        <div>
+          <img src="../../birthdayPic/happy_birthday_card_1.jpeg"></img>
+        </div>
+      </a>
     </div>
   );
 }
 
-export async function getServerSideProps() {
-  const { getImages } = await import('../../../utils/database');
+// this is back-end code -- You are in server side
+export async function getServerSideProps(context) {
+  const { getCardById } = await import('../../../utils/database');
+  // this is server side code.
 
-  const images = await getImages();
+  const card = await getCardById(context.query.id);
+  console.log(card);
 
-  console.log('images', images);
-
-  return {
-    props: {
-      images: images,
-    },
-  };
+  return { props: { card } };
 }
