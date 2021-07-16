@@ -12,14 +12,23 @@ export default function Home() {
           <img
             className={styles.backgroundImage}
             alt="girlSwing"
-            src="../../girl_swing.jpeg"
+            src="../../swing_girl.png"
           ></img>
           <div className={styles.container}>
             <div className={styles.innerContainer}>
               <div className={styles.header}>Register</div>
               <div className={styles.box}>
                 <div className={styles.inputGroup}>
-                  <label type="username">Username</label>
+                  <label type="username">First Name</label>
+                  <input
+                    type="text"
+                    name="username"
+                    className={styles.loginInput}
+                    placeholder="Username"
+                  />
+                </div>
+                <div className={styles.inputGroup}>
+                  <label type="username">Last Name</label>
                   <input
                     type="text"
                     name="username"
@@ -60,6 +69,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <footer className={styles.footer}>
+        &#169;Copy by Vala A - Postit final project
+      </footer>
     </div>
   );
 }

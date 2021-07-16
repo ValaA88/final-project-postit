@@ -1,7 +1,11 @@
 .page {
   background-color: #043004ec;
   padding-bottom: 50px;
-  margin-top: 0px;
+  margin-top: -700px;
+}
+
+.backgroundImage {
+  width: 100%;
 }
 
 .cardTitle {

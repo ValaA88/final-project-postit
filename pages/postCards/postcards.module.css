@@ -2,11 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
+
   text-align: center;
-  background-color: #043004ec;
+  background-color: rgb(8, 8, 8);
   content: '';
   clear: both;
+}
+
+.backgroundImage {
+  width: 100%;
+}
+
+.allColumns {
+  margin-top: -3300px;
 }
 
 .row {
@@ -74,4 +82,31 @@
   font-family: fantasy;
   font-size: 18px;
   color: white;
+}
+
+.bottomColumn {
+  display: flex;
+}
+
+.bottomImage {
+  width: 60%;
+  margin-right: 30px;
+}
+
+.bottomText {
+  font-family: fantasy;
+  font-size: 20px;
+  background-color: rgb(250, 245, 250);
+  margin-left: 50px;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #043004ec;
+
+  margin-bottom: 10px;
 }

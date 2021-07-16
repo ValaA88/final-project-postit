@@ -7,23 +7,31 @@ export default function SingleCardPage() {
   return (
     <div>
       <Header />
+      <img
+        className={styles.backgroundImage}
+        alt="girlSwing"
+        src="../../background1.png"
+      ></img>
       <div>{categoriesPage}</div>
-      <a href={card}>
-        <div>
+      <div>
+        <a href="./About">
           <img src="../../birthdayPic/happy_birthday_card_1.jpeg"></img>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
   );
 }
 
-// this is back-end code -- You are in server side
-export async function getServerSideProps(context) {
-  const { getCardById } = await import('../../../utils/database');
-  // this is server side code.
+export async function getServerSideProps() {
+  const { getImages } = await import('../../../utils/database');
 
-  const card = await getCardById(context.query.id);
-  console.log(card);
+  const images = await getImages();
 
-  return { props: { card } };
+  console.log('images', images);
+
+  return {
+    props: {
+      images: images,
+    },
+  };
 }

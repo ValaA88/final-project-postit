@@ -1,7 +1,7 @@
 import Router from 'next/router';
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
-import styles from './singlePostCard.module.css';
+import styles from './singlepostcard.module.css';
 
 // this is front-end code
 export default function SinglePostCard({ card }) {
@@ -18,6 +18,11 @@ export default function SinglePostCard({ card }) {
   return (
     <div>
       <Header />
+      <img
+        className={styles.backgroundImage}
+        alt="girlSwing"
+        src="../../background1.png"
+      ></img>
       <div className={styles.page}>
         <div className={styles.cardTitle}>{card.title}</div>
         <div className={styles.imageAndTextColumn}>
