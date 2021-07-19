@@ -9,8 +9,8 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <a href="/">Home Page</a>
-      <a href="about">About</a>
-      <a href="postcards">Post Cards</a>
+      <a href="/about">About</a>
+      <a href="/postcards">Post Cards</a>
       <div className={styles.cart}>
         {email && <p className={styles.item}>{email}</p>}
         {email ? (

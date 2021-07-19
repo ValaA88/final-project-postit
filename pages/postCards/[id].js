@@ -13,6 +13,7 @@ export default function SinglePostCard({ card }) {
   // pass the count to the cookie here
   // };
   const [actualDateInput, setActualDateInput] = useState(false);
+  const [insideText, setInsideText] = useState('');
 
   return (
     <div>
@@ -26,10 +27,16 @@ export default function SinglePostCard({ card }) {
         <div className={styles.cardTitle}>{card.title}</div>
         <div className={styles.imageAndTextColumn}>
           <img className={styles.image} src={card.url} />
+
+          <div className={styles.text}>{insideText}</div>
+
           <div className={styles.textColumn}>
             <h1 className={styles.inputTextHeader}>Write your text </h1>
             <div className={styles.textAndCalender}>
-              <textarea className={styles.textArea}></textarea>
+              <textarea
+                onChange={(e) => setInsideText(e.target.value)}
+                className={styles.textArea}
+              ></textarea>
               <p className={styles.calenderText}>Choose a date</p>
               <input
                 className={styles.calender}
