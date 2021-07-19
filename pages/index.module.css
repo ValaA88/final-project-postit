@@ -25,9 +25,9 @@
 }
 
 .header {
-  font-family: fantasy;
-  font-size: 30px;
+  font-size: 25px;
   color: #043004ec;
+  margin-bottom: 20px;
 }
 
 .box {
@@ -37,29 +37,33 @@
 }
 
 .inputGroup {
-  font-family: fantasy;
   display: flex;
-  font-size: 20px;
+  font-size: 18px;
   gap: 20px;
   color: #043004ec;
 }
 
 .loginInput {
-  display: grid;
-  border-radius: 5px;
-  color: #043004ec;
+  border: none;
+  background-color: white;
+  width: 300px;
+  height: 40px;
+  color: black;
 }
 
 .loginBtn {
-  font-family: fantasy;
   font-size: 15px;
   border-radius: 5px;
   padding-bottom: 4px;
   color: #043004ec;
 }
+
 .loginBtn:hover {
-  transform: translate3d();
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 500ms;
 }
+
 .emailText {
   margin-right: 42px;
 }

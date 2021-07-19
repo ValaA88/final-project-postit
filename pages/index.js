@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </div>
       <footer className={styles.footer}>
-        &#169;Copy by Vala A - Postit final project
+        &#169; Vala A - Postit final project
       </footer>
     </div>
   );

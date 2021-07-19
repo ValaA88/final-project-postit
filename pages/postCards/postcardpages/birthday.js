@@ -1,8 +1,9 @@
 import Header from '../../../components/Header/Header';
 import styles from '../../postcards/singlepostcard.module.css';
 
-export default function SingleCardPage() {
+export default function SingleCardPage({ image }) {
   const categoriesPage = ['birthday'];
+  const cardLink = `postcards/${image}`;
 
   return (
     <div>
@@ -14,7 +15,7 @@ export default function SingleCardPage() {
       ></img>
       <div>{categoriesPage}</div>
       <div>
-        <a href="./About">
+        <a href={cardLink}>
           <img src="../../birthdayPic/happy_birthday_card_1.jpeg"></img>
         </a>
       </div>
