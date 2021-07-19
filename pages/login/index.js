@@ -9,11 +9,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router';
 import Header from '../../components/Header/Header';
 import styles from '../../pages/login/login.module.css';
+import { getCookieValue, setCookie } from '../../utils/cookies';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const url = '../pages/postcards';
 
   return (
     <div>
@@ -32,6 +32,8 @@ export default function Login() {
                 password: password,
               }),
             });
+            setCookie('login', email);
+            window.location.href = '/postcards';
           }}
         >
           <div className={styles.pageColumn}>
@@ -44,6 +46,7 @@ export default function Login() {
                     Email
                   </label>
                   <input
+                    onChange={(event) => setEmail(event.target.value)}
                     type="text"
                     name="email"
                     className={styles.loginInput}
@@ -56,15 +59,15 @@ export default function Login() {
                     Password
                   </label>
                   <input
+                    onChange={(event) => setPassword(event.target.value)}
                     type="password"
                     name="password"
                     className={styles.loginInput}
                     placeholder="Password"
                   />
                 </div>
-                <a href={url}>
-                  <button className={styles.button}>Login</button>
-                </a>
+
+                <button className={styles.button}>Login</button>
               </div>
             </div>
             <div>
@@ -82,7 +85,7 @@ export default function Login() {
 }
 
 // export async function getServerSideProps() {
-//   const { getImages } = await import('../../../utils/database');
+//   const { getImages } = await import('../../utils/database');
 
 //   const images = await getImages();
 

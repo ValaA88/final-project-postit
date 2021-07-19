@@ -10,26 +10,28 @@ import { getUserByEmail, insertUser } from '../../utils/database';
 export default async function loginHandler(req, res) {
   if (req.method === 'POST') {
     const { email, password } = req.body;
-    console.log('in api', firstName);
     // Create a hash of the password to save in the database
     const passwordHash = await argon2.hash(password);
-
     const user = await getUserByEmail(email);
-
-    if (!userWithPasswordHash) {
-      return res
-        .status(401)
-        .json({ errors: [{ message: 'Email or password did not match' }] });
+    console.log('hello', user);
+    if (user) {
+      console.log('login am man ');
     }
 
-    const passwordMatches = await argon2.verify(
-      userWithPasswordHash.passwordHash,
-      password,
-    );
+    // if (!userWithPasswordHash) {
+    //   return res
+    //     .status(401)
+    //     .json({ errors: [{ message: 'Email or password did not match' }] });
+    // }
+
+    // const passwordMatches = await argon2.verify(
+    //   userWithPasswordHash.passwordHash,
+    //   password,
+    // );
 
     // If the password doesn't match the password hash, return a
     // 401 Unauthorized status code and an error
-    if (!passwordMatches) {
+    if (true) {
       return res
         .status(200)
         .json({ errors: [{ passwordMatches: passwordMatches }] });

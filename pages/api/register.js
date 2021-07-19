@@ -10,7 +10,6 @@ import { insertUser } from '../../utils/database';
 export default async function registerHandler(req, res) {
   if (req.method === 'POST') {
     const { firstName, lastName, email, password } = req.body;
-    console.log('in api', firstName);
     // Create a hash of the password to save in the database
     const passwordHash = await argon2.hash(password);
 

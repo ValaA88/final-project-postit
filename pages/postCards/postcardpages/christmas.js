@@ -17,7 +17,6 @@ export async function getServerSideProps() {
 
   const images = await getImages();
 
-  console.log('images', images);
 
   return {
     props: {

@@ -1,9 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import React, { useState } from 'react';
 import Header from '../components/Header/Header';
 import styles from './index.module.css';
 
 export default function Home() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   return (
     <div>
       <div className={styles.homePage}>
@@ -18,52 +23,84 @@ export default function Home() {
             <div className={styles.innerContainer}>
               <div className={styles.header}>Register</div>
               <div className={styles.box}>
-                <div className={styles.inputGroup}>
-                  <label type="username">First Name</label>
-                  <input
-                    type="text"
-                    name="username"
-                    className={styles.loginInput}
-                    placeholder="Username"
-                  />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label type="username">Last Name</label>
-                  <input
-                    type="text"
-                    name="username"
-                    className={styles.loginInput}
-                    placeholder="Username"
-                  />
-                </div>
+                <form
+                  onSubmit={async (event) => {
+                    alert('haha');
+                    event.preventDefault();
+                    const response = await fetch('/api/register', {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        password: password,
+                      }),
+                    });
+                    // const json = await response.json();
 
-                <div className={styles.inputGroup}>
-                  <label className={styles.emailText} type="email">
-                    Email
-                  </label>
-                  <input
-                    type="text"
-                    name="email"
-                    className={styles.loginInput}
-                    placeholder="Email"
-                  />
-                </div>
+                    //   if ('errors' in json) {
+                    //     setError(json.errors[0].message);
+                    //     return;
+                    //   }
 
-                <div className={styles.inputGroup}>
-                  <label className={styles.passwordText} type="password">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    className={styles.loginInput}
-                    placeholder="Password"
-                  />
-                </div>
-                <button type="button" className={styles.loginBtn}>
-                  {' '}
-                  Register
-                </button>
+                    //   props.refreshUsername();
+
+                    //   // Navigate to the user's page when
+                    //   // they have been successfully created
+                    //   router.push(`/users/management/${json.user.id}/read`);
+                  }}
+                >
+                  <div className={styles.inputGroup}>
+                    <label type="username">First Name</label>
+                    <input
+                      onChange={(event) => setFirstName(event.target.value)}
+                      type="text"
+                      name="username"
+                      className={styles.loginInput}
+                      placeholder="Username"
+                    />
+                  </div>
+                  <div className={styles.inputGroup}>
+                    <label type="username">Last Name</label>
+                    <input
+                      onChange={(event) => setLastName(event.target.value)}
+                      type="text"
+                      name="username"
+                      className={styles.loginInput}
+                      placeholder="Username"
+                    />
+                  </div>
+
+                  <div className={styles.inputGroup}>
+                    <label className={styles.emailText} type="email">
+                      Email
+                    </label>
+                    <input
+                      onChange={(event) => setEmail(event.target.value)}
+                      type="text"
+                      name="email"
+                      className={styles.loginInput}
+                      placeholder="Email"
+                    />
+                  </div>
+
+                  <div className={styles.inputGroup}>
+                    <label className={styles.passwordText} type="password">
+                      Password
+                    </label>
+                    <input
+                      onChange={(event) => setPassword(event.target.value)}
+                      type="password"
+                      name="password"
+                      className={styles.loginInput}
+                      placeholder="Password"
+                    />
+                  </div>
+                  <button className={styles.loginBtn}>Register</button>
+                </form>
               </div>
             </div>
           </div>

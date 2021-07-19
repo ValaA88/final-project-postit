@@ -38,7 +38,7 @@
 }
 
 .label {
-  color: #043004ec;
+  color: black;
   border-radius: 5px;
 }
 
@@ -50,11 +50,10 @@
 
 .loginInput {
   border: none;
-  background-color: white;
+
   width: 300px;
   height: 40px;
   margin: $sm 0 !important;
-  color: white !important;
 }
 
 .button {

@@ -7,7 +7,7 @@ import styles from './postcards.module.css';
 export default function PostCards({ images }) {
   // instead of writing props, I can expand with {}
   // and write the props names inside it
-  console.log(images);
+  // console.log(images);
   const categories = [
     { title: 'birthday' },
     { title: 'christmas' },
@@ -128,8 +128,6 @@ export async function getServerSideProps() {
   const { getImages } = await import('../../utils/database');
 
   const images = await getImages();
-
-  console.log('images', images);
 
   return {
     props: {

@@ -5,7 +5,6 @@ import styles from './singlepostcard.module.css';
 
 // this is front-end code
 export default function SinglePostCard({ card }) {
-  console.log('vala', card);
   // const [quantity, setQuantity] = useState(0);
 
   // const [count, setCount] = useState(0);
@@ -57,7 +56,6 @@ export async function getServerSideProps(context) {
   // this is server side code.
 
   const card = await getCardById(context.query.id);
-  console.log(card);
 
   return { props: { card } };
 }
