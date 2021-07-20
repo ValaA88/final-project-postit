@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/babel-plugin": "^11.3.0",
     "@emotion/react": "^11.4.0",
+    "@sendgrid/mail": "^7.4.5",
     "argon2": "^0.28.2",
     "camelcase-keys": "^6.2.2",
     "carousel": "^0.0.3",

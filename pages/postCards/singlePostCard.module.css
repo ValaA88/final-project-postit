@@ -118,6 +118,7 @@
   color: #043004ec;
 }
 .text {
+  word-break: break-all;
   width: 800px;
   max-width: 800px;
   margin-top: 30px;

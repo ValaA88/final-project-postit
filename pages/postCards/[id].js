@@ -14,7 +14,19 @@ export default function SinglePostCard({ card }) {
   // };
   const [actualDateInput, setActualDateInput] = useState(false);
   const [insideText, setInsideText] = useState('');
-
+  const [email, setEmail] = useState('');
+  const handleClick = async () => {
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        insideText: insideText,
+        email: email,
+      }),
+    });
+  };
   return (
     <div>
       <Header />
@@ -46,7 +58,21 @@ export default function SinglePostCard({ card }) {
                 name="deadLine"
                 value={actualDateInput}
               />
-              <button className={styles.button}>Next</button>
+              <div>
+                <label className={styles.emailText} type="email">
+                  Email
+                </label>
+                <input
+                  onChange={(event) => setEmail(event.target.value)}
+                  type="text"
+                  name="email"
+                  className={styles.loginInput}
+                  placeholder="Email"
+                />
+              </div>
+              <button onClick={handleClick} className={styles.button}>
+                Next
+              </button>
             </div>
           </div>
         </div>

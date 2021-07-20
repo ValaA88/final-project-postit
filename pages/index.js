@@ -14,11 +14,23 @@ export default function Home() {
       <div className={styles.homePage}>
         <Header />
         <div>
+          {/* <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <h1 style={{ fontSize: '60px', margin: '0' }}>Postits</h1>
+            <h2>Spread The Love</h2>
+          </div> */}
           <img
             className={styles.backgroundImage}
             alt="girlSwing"
             src="../../swing_girl.png"
           ></img>
+
           <div className={styles.container}>
             <div className={styles.innerContainer}>
               <div className={styles.header}>Register</div>
@@ -94,6 +106,12 @@ export default function Home() {
                   <button className={styles.loginBtn}>Register</button>
                   <button className={styles.guestBtn}>Continue as Guest</button>
                 </form>
+                <p>
+                  already registered?{' '}
+                  <a style={{ textDecoration: 'underline' }} href="/login">
+                    Login here
+                  </a>
+                </p>
               </div>
             </div>
           </div>
