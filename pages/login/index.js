@@ -55,7 +55,7 @@ export default function Login() {
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <label className={styles.label} type="password">
+                  <label className={styles.labelPassword} type="password">
                     Password
                   </label>
                   <input

@@ -39,22 +39,12 @@ export default function Home() {
                         password: password,
                       }),
                     });
-                    // const json = await response.json();
-
-                    //   if ('errors' in json) {
-                    //     setError(json.errors[0].message);
-                    //     return;
-                    //   }
-
-                    //   props.refreshUsername();
-
-                    //   // Navigate to the user's page when
-                    //   // they have been successfully created
-                    //   router.push(`/users/management/${json.user.id}/read`);
                   }}
                 >
                   <div className={styles.inputGroup}>
-                    <label type="username">First Name</label>
+                    <label className={styles.labelText} type="username">
+                      First Name
+                    </label>
                     <input
                       onChange={(event) => setFirstName(event.target.value)}
                       type="text"
@@ -64,7 +54,9 @@ export default function Home() {
                     />
                   </div>
                   <div className={styles.inputGroup}>
-                    <label type="username">Last Name</label>
+                    <label className={styles.labelText} type="username">
+                      Last Name
+                    </label>
                     <input
                       onChange={(event) => setLastName(event.target.value)}
                       type="text"
@@ -100,6 +92,7 @@ export default function Home() {
                     />
                   </div>
                   <button className={styles.loginBtn}>Register</button>
+                  <button className={styles.guestBtn}>Continue as Guest</button>
                 </form>
               </div>
             </div>

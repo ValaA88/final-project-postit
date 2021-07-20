@@ -37,20 +37,20 @@
   color: #043004ec;
 }
 
-.label {
-  color: black;
-  border-radius: 5px;
+.labelPassword {
+  color: #043004ec;
+  margin-top: 8px;
 }
 
 .labelEmail {
   color: #043004ec;
   margin-right: 34px;
-  border-radius: 5px;
+  margin-top: 8px;
 }
 
 .loginInput {
   border: none;
-
+  border-radius: 8px;
   width: 300px;
   height: 40px;
   margin: $sm 0 !important;
@@ -58,10 +58,16 @@
 
 .button {
   font-size: 15px;
-  border-radius: 5px;
-  padding-bottom: 10px;
-
+  width: 130px;
+  border-radius: 20px;
+  border-style: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: #043004ec;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 138px;
 }
 
 .button:hover {

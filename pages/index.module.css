@@ -46,6 +46,9 @@
 .loginInput {
   border: none;
   background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
   width: 300px;
   height: 40px;
   color: black;
@@ -53,9 +56,16 @@
 
 .loginBtn {
   font-size: 15px;
-  border-radius: 5px;
-  padding-bottom: 4px;
+  width: 130px;
+  border-radius: 20px;
+  border-style: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
   color: #043004ec;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 40px;
 }
 
 .loginBtn:hover {
@@ -63,13 +73,42 @@
   transform: scale(1.05);
   transition: transform 500ms;
 }
+.guestBtn {
+  font-size: 15px;
+  width: 180px;
+  border-radius: 20px;
+  border-style: none;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  background-color: #043004ec;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  text-anchor: middle;
+  text-align: center;
+}
+
+.guestBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 500ms;
+}
+
+.labelText {
+  margin-top: 15px;
+}
 
 .emailText {
-  margin-right: 42px;
+  margin-right: 43px;
+  margin-top: 15px;
 }
 
 .passwordText {
-  margin-right: 7px;
+  margin-right: 9px;
+  margin-top: 15px;
 }
 
 .footer {
