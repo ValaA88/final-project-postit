@@ -2,7 +2,7 @@ import Header from '../../../components/Header/Header';
 import styles from '../../postcards/postcardpages/postcardpages.module.css';
 
 export default function SingleCardPage({ images }) {
-  const categoriesPage = 'christmas';
+  const categoriesPage = 'random';
   // const cardLink = `postcards/${image}`;
 
   return (

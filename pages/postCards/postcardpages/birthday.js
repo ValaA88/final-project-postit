@@ -1,5 +1,5 @@
 import Header from '../../../components/Header/Header';
-import styles from '../../postcards/singlepostcard.module.css';
+import styles from '../../postcards/postcardpages/postcardpages.module.css';
 
 export default function SingleCardPage({ images }) {
   const categoriesPage = 'birthday';
@@ -11,21 +11,29 @@ export default function SingleCardPage({ images }) {
       <img
         className={styles.backgroundImage}
         alt="girlSwing"
-        src="../../background1.png"
+        src="../../background2.png"
       ></img>
       <div>{categoriesPage}</div>
-      <div>
+      <div className={styles.imageColumn}>
         {images
           .filter((image) => image.category === categoriesPage)
           .map((image) => {
             const cardLink = `/postcards/${image.id}`;
             return (
               <a href={cardLink}>
-                <img src={image.url}></img>
+                <div className={styles.imageAndTitle}>
+                  <div className={styles.imageTitle}>{image.title}</div>
+                  <div>
+                    <img className={styles.images} src={image.url}></img>
+                  </div>
+                </div>
               </a>
             );
           })}
       </div>
+      <footer className={styles.footer}>
+        &#169; Vala A - Postit final project
+      </footer>
     </div>
   );
 }
