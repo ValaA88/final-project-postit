@@ -1,0 +1,17 @@
+.image {
+  width: 50%;
+  border-radius: 80px;
+}
+
+.text {
+}
+
+.button {
+}
+
+.column {
+  display: flex;
+}
+
+.textColumn {
+}

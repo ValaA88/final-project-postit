@@ -59,14 +59,14 @@ export default function SinglePostCard({ card }) {
                 value={actualDateInput}
               />
               <div>
-                <label className={styles.emailText} type="email">
+                <label className={styles.calenderText} type="email">
                   Email
                 </label>
                 <input
                   onChange={(event) => setEmail(event.target.value)}
                   type="text"
                   name="email"
-                  className={styles.loginInput}
+                  className={styles.email}
                   placeholder="Email"
                 />
               </div>

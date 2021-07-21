@@ -65,7 +65,7 @@
 .textArea {
   padding-left: 20px;
   padding-right: 10px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   width: 313px;
   border-radius: 10px;
   font-family: fantasy;
@@ -73,6 +73,7 @@
 }
 
 .calenderText {
+  display: flex;
   margin-bottom: -20px;
   margin-top: 10px;
   font-family: fantasy;
@@ -82,7 +83,17 @@
 
 .calender {
   margin-left: 1px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  border-radius: 10px;
+  font-family: fantasy;
+}
+
+.email {
+  margin-left: 1px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   border-radius: 10px;
   font-family: fantasy;
 }
@@ -92,8 +103,7 @@
   padding: 5px 30px;
   border-width: 1px;
   border-color: rgb(255, 215, 0);
-  margin-top: 25px;
-  margin-bottom: 10px;
+
   margin-left: 20px;
   font-family: fantasy;
   font-size: 18px;
