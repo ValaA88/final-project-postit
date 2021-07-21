@@ -3,7 +3,7 @@ import argon2 from 'argon2';
 // Since all files in the API folder
 // are server-side only, we can import from
 // the database statically at the top
-import { getUserByEmail, insertUser } from '../../utils/database';
+import { getUserByEmail } from '../../utils/database';
 
 // An API Route needs to define the response
 // that is returned to the user
