@@ -77,9 +77,7 @@ export default function SinglePostCard({ card }) {
           </div>
         </div>
       </div>
-      <footer className={styles.footer}>
-        &#169;Copy by Vala A - Postit final project
-      </footer>
+      <footer className={styles.footer}>&#169; Vala A - Postit</footer>
     </div>
   );
 }
