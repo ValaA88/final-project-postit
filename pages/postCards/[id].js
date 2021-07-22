@@ -38,9 +38,11 @@ export default function SinglePostCard({ card }) {
       <div className={styles.page}>
         <div className={styles.cardTitle}>{card.title}</div>
         <div className={styles.imageAndTextColumn}>
-          <img className={styles.image} src={card.url} />
+          <div>
+            <img className={styles.image} src={card.url} />
 
-          <div className={styles.text}>{insideText}</div>
+            <div className={styles.text}>{insideText}</div>
+          </div>
 
           <div className={styles.textColumn}>
             <h1 className={styles.inputTextHeader}>Write your text </h1>
@@ -70,9 +72,11 @@ export default function SinglePostCard({ card }) {
                   placeholder="Email"
                 />
               </div>
-              <button onClick={handleClick} className={styles.button}>
-                Next
-              </button>
+              <a href="/checkoutpage">
+                <button onClick={handleClick} className={styles.button}>
+                  Next
+                </button>
+              </a>
             </div>
           </div>
         </div>
