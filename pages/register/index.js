@@ -26,18 +26,6 @@ export default function Register() {
                 password: password,
               }),
             });
-            // const json = await response.json();
-
-            //   if ('errors' in json) {
-            //     setError(json.errors[0].message);
-            //     return;
-            //   }
-
-            //   props.refreshUsername();
-
-            //   // Navigate to the user's page when
-            //   // they have been successfully created
-            //   router.push(`/users/management/${json.user.id}/read`);
           }}
         >
           <p>First Name</p>

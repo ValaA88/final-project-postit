@@ -12,10 +12,13 @@ export default function checkoutPage() {
             <br />
             See you next time
           </p>
-          <button className={styles.button}>Send another Card</button>
+          <a href="/postcards">
+            <button className={styles.button}>Send another Card</button>
+          </a>
         </div>
         <img
           src="swing_girl.png"
+          key="swingGirl"
           alt="swig_girl"
           className={styles.image}
         ></img>

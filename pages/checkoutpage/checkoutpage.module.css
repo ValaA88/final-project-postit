@@ -1,17 +1,43 @@
 .image {
   width: 50%;
   border-radius: 80px;
+  margin-left: 100px;
 }
 
 .text {
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #043004ec;
 }
 
 .button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  width: 180px;
+  border-style: none;
+  border-radius: 40px;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  background-color: #043004ec;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 500ms;
 }
 
 .column {
   display: flex;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 
 .textColumn {
+  margin-right: 30px;
+  margin-left: 50px;
 }
