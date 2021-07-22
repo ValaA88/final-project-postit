@@ -27,7 +27,6 @@ export default function Home() {
               <div className={styles.box}>
                 <form
                   onSubmit={async (event) => {
-                    alert('haha');
                     event.preventDefault();
                     const response = await fetch('/api/register', {
                       method: 'POST',
@@ -93,8 +92,13 @@ export default function Home() {
                       placeholder="Password"
                     />
                   </div>
+
                   <button className={styles.loginBtn}>Register</button>
-                  <button className={styles.guestBtn}>Continue as Guest</button>
+                  <a href="/postcards">
+                    <button className={styles.guestBtn}>
+                      Continue as Guest
+                    </button>
+                  </a>
                 </form>
                 <p className={styles.alreadyRegistered}>
                   already registered?{' '}

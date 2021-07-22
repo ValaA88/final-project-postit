@@ -22,8 +22,9 @@ export default function Header() {
             Login
           </a>
         )}
-
-        <img className={styles.icon} src="../shoping-card.jpeg" />
+        <a href="login">
+          <img className={styles.icon} src="../swing_girl.png" />
+        </a>
       </div>
     </header>
   );
