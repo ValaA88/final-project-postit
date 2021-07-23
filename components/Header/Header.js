@@ -14,15 +14,15 @@ export default function Header() {
       <div className={styles.cart}>
         {email && <p className={styles.item}>{email}</p>}
         {email ? (
-          <a className={styles.item} onClick={handleLogout} href="login">
+          <a className={styles.item} onClick={handleLogout} href="/login">
             Logout
           </a>
         ) : (
-          <a className={styles.item} href="login">
+          <a className={styles.item} href="/login">
             Login
           </a>
         )}
-        <a href="login">
+        <a href="/login">
           <img className={styles.icon} src="../swing_girl.png" />
         </a>
       </div>

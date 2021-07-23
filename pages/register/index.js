@@ -40,6 +40,7 @@ export default function Register() {
             type="password"
             onChange={(event) => setPassword(event.target.value)}
           ></input>
+
           <button>Register</button>
         </form>
       </div>

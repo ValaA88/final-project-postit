@@ -6,26 +6,24 @@ import fs from 'fs';
 import path from 'path';
 
 export default async function sendEmail(req, res) {
-  const pathToAttachment = path.resolve(
-    `./public`,
-    './landscapePic/landscape_4.jpeg',
-  );
+  const { email, insideText, card } = req.body;
+  const pathToAttachment = path.resolve(`./public`, `${card}/attachment.pdf`);
 
   const attachment = fs.readFileSync(pathToAttachment).toString('base64');
   // console.log('image', attachment);
-  const { email, insideText } = req.body;
+
   // console.log('hello', { email, insideText });
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: { email }, // Change to your recipient
-    from: 'vala.arefi88@gmail.com', // Change to your verified sender
+    from: 'postit@vala88.me', // Change to your verified sender
     subject: 'Postit, Spread the Love',
     text: insideText,
 
     attachments: [
       {
         content: attachment,
-        filename: 'attach.jpeg',
+        filename: 'attachment.pdf',
         type: 'image/jpeg',
         disposition: 'attachment',
       },

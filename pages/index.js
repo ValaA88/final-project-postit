@@ -93,12 +93,12 @@ export default function Home() {
                     />
                   </div>
 
-                  <button className={styles.loginBtn}>Register</button>
-                  <a href="/postcards">
-                    <button className={styles.guestBtn}>
-                      Continue as Guest
-                    </button>
-                  </a>
+                  <button className={styles.loginBtn}>
+                    <a href="/login">Register</a>
+                  </button>
+                  <button className={styles.guestBtn}>
+                    <a href="/postcards">Continue as Guest</a>
+                  </button>
                 </form>
                 <p className={styles.alreadyRegistered}>
                   already registered?{' '}
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.mainText}>
-              <h1 className={styles.h1Text}>Postits</h1>
+              <h1 className={styles.h1Text}>Postit</h1>
               <h2 className={styles.h2Text}>Spread The Love</h2>
             </div>
           </div>

@@ -38,11 +38,9 @@ export default function SinglePostCard({ card }) {
       <div className={styles.page}>
         <div className={styles.cardTitle}>{card.title}</div>
         <div className={styles.imageAndTextColumn}>
-          <div>
-            <img className={styles.image} src={card.url} />
+          <img className={styles.image} src={card.url} />
 
-            <div className={styles.text}>{insideText}</div>
-          </div>
+          <div className={styles.text}>{insideText}</div>
 
           <div className={styles.textColumn}>
             <h1 className={styles.inputTextHeader}>Write your text </h1>
